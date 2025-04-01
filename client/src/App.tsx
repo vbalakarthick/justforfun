@@ -9,8 +9,11 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={PrankPage} />
-      <Route component={NotFound} />
+      <Route path="*">
+        <PrankPage />
+      </Route>
     </Switch>
+
   );
 }
 
